@@ -51,6 +51,49 @@ npm run dev
 
 <br>
 
+## 🌐 Deploying to GitHub Pages (with Yarn)
+
+If you change the repository name or want to deploy your Vite + React project to GitHub Pages, follow these steps:
+
+1. **Update the `base` property in `vite.config.js`:**
+   ```js
+   // vite.config.js
+   export default {
+     base: '/your-repo-name/',
+     // ...other config...
+   }
+   ```
+   Replace `your-repo-name` with your actual repository name.
+
+2. **Install the gh-pages package:**
+   ```bash
+   yarn add --dev gh-pages
+   ```
+
+3. **Build your project:**
+   ```bash
+   yarn build
+   ```
+
+4. **Deploy the build folder to GitHub Pages:**
+   ```bash
+   yarn deploy
+   ```
+
+5. **Configure GitHub Pages:**
+   - Go to your repository on GitHub.
+   - Click on **Settings** > **Pages**.
+   - Set the source to the `gh-pages` branch.
+
+6. **Access your site:**
+   - Your site will be available at:  
+     `https://<your-username>.github.io/<your-repo-name>/`
+
+**Note:**  
+If you change your repository name, update all references to the old name in your project files and README.
+
+<br>
+
 ## 🚀 Technologies Used / Tecnologías utilizadas
 
 * React
